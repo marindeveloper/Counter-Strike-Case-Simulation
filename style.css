@@ -2,27 +2,60 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color: rgb(31, 31, 31);
     color: rgb(201, 201, 201);
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding: 20px;
+    text-align: center;
+}
+
+#Case, #quantity, #simulateBtn {
+    font-weight: bold;
+    background-color: rgb(201, 201, 201);
+    color: rgb(31, 31, 31);
+    border-radius: 10px;
+    margin: 10px 0;
+    padding: 10px;
 }
 
 #Case {
-    font-weight: bold;
-    background-color: rgb(201, 201, 201);
-    color: rgb(31, 31, 31);
-    border-radius: 10px;
+    font-size: 16px;
 }
-
 
 #quantity {
-    border-radius: 10px;
-    font-weight: bold;
-    background-color: rgb(201, 201, 201);
-    color: rgb(31, 31, 31);
+    font-size: 16px;
+    width: 80%;
+    max-width: 150px;
+    display: inline-block; /* Keep it inline */
 }
 
-
 #simulateBtn {
-    border-radius: 10px;
-    font-weight: bold;
-    background-color: rgb(201, 201, 201);
-    color: rgb(31, 31, 31);
+    font-size: 18px;
+    cursor: pointer;
+    margin-left: 10px;
+    display: inline-block; /* Keep it inline */
+}
+
+#simulateBtn:hover {
+    background-color: rgb(170, 170, 170);
+}
+
+#output {
+    margin-top: 20px;
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+}
+
+#startext {
+    font-size: 14px;
+    margin-top: 20px;
+    color: rgb(255, 215, 0);
+}
+
+label, .form-group {
+    display: inline-block;
+    text-align: left;
+    margin-right: 10px;
 }

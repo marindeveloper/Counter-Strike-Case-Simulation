@@ -54,10 +54,10 @@ function openCases() {
     let profitPercent = (totalValue - moneySpent) / (moneySpent) * 100;
 
     let outputDiv = document.getElementById("output");
-    outputDiv.innerHTML = `<h3>Simulation Results for ${numCases} cases:</h3>`;
-    outputDiv.innerHTML += `<p>Money spent: $${moneySpent.toFixed(2)}</p>`;
-    outputDiv.innerHTML += `<p>Total value of items*: $${totalValue.toFixed(2)}</p>`;
-    outputDiv.innerHTML += `<p>Profit/Loss: <span style="color: ${profit >= 0 ? 'green' : 'red'};">$${profit.toFixed(2)}</span> or <span style="color: ${profitPercent >= 0 ? 'green' : 'red'};">${profitPercent.toFixed(2)}%</span></p>`;
+    outputDiv.innerHTML = `<h3>Simulation Results for ${numCases} cases:</h3><br/>`;
+    outputDiv.innerHTML += `<p>Money spent: $${moneySpent.toFixed(2)}</p><br/>`;
+    outputDiv.innerHTML += `<p>Total value of items*: $${totalValue.toFixed(2)}</p><br/>`;
+    outputDiv.innerHTML += `<p>Profit/Loss: <span style="color: ${profit >= 0 ? 'green' : 'red'};">$${profit.toFixed(2)}</span> or <span style="color: ${profitPercent >= 0 ? 'green' : 'red'};">${profitPercent.toFixed(2)}%</span></p><br/>`;
 
 
     for (const rarity in results) { // just for some text formatting so it looks nicer
@@ -81,7 +81,7 @@ function openCases() {
                 break;
         }
     
-        outputDiv.innerHTML += `<p style="color: ${rarityColor};">${rarity}: </p><p>${results[rarity]}</p>`;
+        outputDiv.innerHTML += `<p style="color: ${rarityColor};">${rarity}: </p><p>${results[rarity]}</p><br/>`;
     }
     document.getElementById("startext").innerHTML = `<p>*The value of items can vary A LOT, due to stuff like the specific skin and/or gun, float values, patterns, market trends, availability etc. The total value is approximate and not always accurate.</p>`;
 }
@@ -116,7 +116,7 @@ document.getElementById("Case").addEventListener("change", function() {
     };
 
     let moneySpent = casePrices[caseType] ? numCases * casePrices[caseType] : 0;
-    document.getElementById("output").innerHTML = `<p>Money spent: $${moneySpent.toFixed(2)}</p>`;
+    document.getElementById("output").innerHTML = `<p>Money spent: $${moneySpent.toFixed(2)}</p><br/>`;
     document.getElementById("startext").innerHTML = `*The value of items can vary A LOT, due to stuff like the specific skin and/or gun, float values, patterns, market trends, availability etc. The total value is approximate and not always accurate.`;
     openCases();
 });
