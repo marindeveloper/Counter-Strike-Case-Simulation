@@ -59,7 +59,6 @@ function openCases() {
     outputDiv.innerHTML += `<p>Total value of items*: $${totalValue.toFixed(2)}</p><br/>`;
     outputDiv.innerHTML += `<p>Profit/Loss: <span style="color: ${profit >= 0 ? 'green' : 'red'};">$${profit.toFixed(2)}</span> or <span style="color: ${profitPercent >= 0 ? 'green' : 'red'};">${profitPercent.toFixed(2)}%</span></p><br/>`;
 
-
     for (const rarity in results) { // just for some text formatting so it looks nicer
         let rarityColor = "";
         
@@ -83,7 +82,12 @@ function openCases() {
     
         outputDiv.innerHTML += `<p style="color: ${rarityColor};">${rarity}: </p><p>${results[rarity]}</p><br/>`;
     }
-    document.getElementById("startext").innerHTML = `<p>*The value of items can vary A LOT, due to stuff like the specific skin and/or gun, float values, patterns, market trends, availability etc. The total value is approximate and not always accurate.</p>`;
+
+    // Add startext
+    document.getElementById("startext").innerHTML = `<p>*The value of items can vary A LOT, due to stuff like the specific skin and/or gun, float values, patterns, market trends, availability etc. The total value is approximate and not always accurate.</p> </br>
+    <p>*Average ROI is the ROI I got from the sources I linked in the README, not a calculated ROI.<p>`;
+
+    calculateROI(results, caseType, numCases);
 }
 
 function calculateTotalValue(results) {
@@ -92,7 +96,7 @@ function calculateTotalValue(results) {
         "Restricted": 3.00,  
         "Classified": 15.00, 
         "Covert": 80.00,   
-        "Exceedingly Rare": 1100.00 // some golds can be under 500, some can be over 2000, it really depends on the type of gun/knife, the float value, skin etc.
+        "Exceedingly Rare": 1100.00 // some golds can be under 500, some can be over 2000, it really depends, might add a skin system or float value system that changes the price of these.
     };
 
     let totalValue = 0;
@@ -102,11 +106,44 @@ function calculateTotalValue(results) {
     return totalValue;
 }
 
+function calculateROI(results, caseType, numCases) {
+    let caseROI = {
+        "Gallery_c": 112.8,
+        "Kilowatt_c": 72.43,
+        "weapon_c3": 77.43,
+        "wildfre_c": 67.89,
+        "weapon_c2": 80.06,
+        "breakout_c": 36.02
+    };
+
+    let expectedROI = caseROI[caseType] || 0;
+
+    let casePrices = { 
+        "Gallery_c": 3.46,
+        "Kilowatt_c": 3.31,
+        "weapon_c3": 11.37,
+        "wildfre_c": 5.85,
+        "weapon_c2": 16.09,
+        "breakout_c": 22.74
+    };
+
+    let moneySpent = casePrices[caseType] ? numCases * casePrices[caseType] : 0;
+
+    let actualTotalValue = calculateTotalValue(results);  
+
+    let actualROI = ((actualTotalValue - moneySpent) / moneySpent) * 100;
+
+    let outputDiv = document.getElementById("output");
+    outputDiv.innerHTML += `<p>Average ROI*: ${expectedROI.toFixed(2)}%</p><br/>`;
+    outputDiv.innerHTML += `<p>Actual ROI: <span style="color: ${actualROI >= 0 ? 'green' : 'red'};">${actualROI.toFixed(2)}%</span></p><br/>`;
+}
+
+
 document.getElementById("Case").addEventListener("change", function() {
     let numCases = parseInt(document.getElementById("quantity").value, 10);
     let caseType = document.getElementById("Case").value;
 
-    let casePrices = { // these are prices of both the case and the key combined*
+    let casePrices = { 
         "Gallery_c": 3.46,
         "Kilowatt_c": 3.31,
         "weapon_c3": 11.37,
@@ -117,6 +154,7 @@ document.getElementById("Case").addEventListener("change", function() {
 
     let moneySpent = casePrices[caseType] ? numCases * casePrices[caseType] : 0;
     document.getElementById("output").innerHTML = `<p>Money spent: $${moneySpent.toFixed(2)}</p><br/>`;
-    document.getElementById("startext").innerHTML = `*The value of items can vary A LOT, due to stuff like the specific skin and/or gun, float values, patterns, market trends, availability etc. The total value is approximate and not always accurate.`;
+    document.getElementById("startext").innerHTML = `<p>*The value of items can vary A LOT, due to stuff like the specific skin and/or gun, float values, patterns, market trends, availability etc. The total value is approximate and not always accurate.</p> </br>
+    <p>*Average ROI is the ROI I got from the sources I linked in the README, not a calculated ROI.<p>`;
     openCases();
 });
