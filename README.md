@@ -15,11 +15,12 @@ This is a simple web-based tool that simulates opening cases in Counter-Strike. 
 
 # How to Use
 
-1. Clone or download the repository: git clone https://github.com/marindeveloper/Counter-Strike-Case-Simulation.git 
+1. Clone or download the repository: ```bash
+   git clone https://github.com/marindeveloper/Counter-Strike-Case-Simulation.git```
 
 
-2. Open index.html in a web browser.
-3. Choose a case, set the number of cases to open, and check the results.
+3. Open index.html in a web browser.
+4. Choose a case, set the number of cases to open, and check the results.
 
 # Future Plans
 
