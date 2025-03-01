@@ -31,8 +31,8 @@ This is a simple web-based tool that simulates opening cases in Counter-Strike. 
 * Actually adding a skin system, so you know what skins you got in the simulation and what float value etc it has, this also helps with better item price calculations.
 
 # Sources
-For Case odds: https://www.esports.net/wiki/guides/counter-strike-case-odds/
-For getting the most popular cs cases: https://skinflow.gg/blog/best-cases
+For Case odds: https://www.esports.net/wiki/guides/counter-strike-case-odds/ <br />
+For getting the most popular cs cases: https://skinflow.gg/blog/best-cases <br />
 For some Case prices(along with their keys): https://csgoskins.gg/
 
 # Contributing
