@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter-Strike Case Drop Probability Simulator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js"></script>
+</head>
+<body>
+    <br/>
+    <br/>
+
+    <label for="Case">Choose a Case to simulate:</label>
+
+    <select name="Case" id="Case">
+        <option value="Gallery_c">Gallery Case ($0.97 + $2.49 key)</option>
+        <option value="Kilowatt_c">Kilowatt Case ($0.82 + $2.49 key)</option>
+        <option value="weapon_c3">CS:GO Weapon Case 3 ($8.88 + $2.49 key)</option>
+        <option value="wildfre_c">Operation Wildfire Case ($3.36 + $2.49 key)</option>
+        <option value="weapon_c2">CS:GO Weapon Case 2 ($13.60 + $2.49 key)</option>
+        <option value="breakout_c">Operation Breakout Weapon Case ($4.79 + $17.95 key)</option>
+    </select>
+    <br/>
+    <br/>
+    <label for="quantity">Quantity of Case drops you want to simulate:</label>
+    <input type="number" id="quantity" name="quantity"></input>
+        
+    <button id="simulateBtn" onclick = "openCases()">Simulate</button>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+
+    <div id="output"></div>
+
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <div id="startext"></div>
+</body>
+</html>

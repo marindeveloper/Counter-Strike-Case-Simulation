@@ -1,0 +1,28 @@
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgb(31, 31, 31);
+    color: rgb(201, 201, 201);
+}
+
+#Case {
+    font-weight: bold;
+    background-color: rgb(201, 201, 201);
+    color: rgb(31, 31, 31);
+    border-radius: 10px;
+}
+
+
+#quantity {
+    border-radius: 10px;
+    font-weight: bold;
+    background-color: rgb(201, 201, 201);
+    color: rgb(31, 31, 31);
+}
+
+
+#simulateBtn {
+    border-radius: 10px;
+    font-weight: bold;
+    background-color: rgb(201, 201, 201);
+    color: rgb(31, 31, 31);
+}
