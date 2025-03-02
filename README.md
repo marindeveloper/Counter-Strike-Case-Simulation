@@ -15,6 +15,10 @@ This is a simple web-based tool that simulates opening cases in Counter-Strike. 
 
 # How to Use
 
+1. Visit the domain: https://cs-case-simulation.vercel.app/
+
+or if you want to run it locally:
+
 1. Clone or download the repository:
    ```bash
    git clone https://github.com/marindeveloper/Counter-Strike-Case-Simulation.git
