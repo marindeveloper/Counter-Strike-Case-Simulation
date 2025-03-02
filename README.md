@@ -15,7 +15,7 @@ This is a simple web-based tool that simulates opening cases in Counter-Strike. 
 
 # How to Use
 
-1. Visit the domain: https://cs-case-simulation.vercel.app/
+1. Visit the domain: https://cs-case-simulation.vercel.app/ (yes this website is mobile friendly but most of the stuff I make isn't)
 
 or if you want to run it locally:
 
