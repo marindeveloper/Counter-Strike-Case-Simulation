@@ -13,6 +13,11 @@ This is a simple web-based tool that simulates opening cases in Counter-Strike. 
 * Displays total money spent and estimated value.
 * Calculates profit/loss and return on investment (ROI).
 
+# Screenshots
+
+![Screenshot 2025-03-08 164512](https://github.com/user-attachments/assets/71a8be55-531d-43a9-97e2-17b41510ee03)
+*View of the site when having selected and simulated cases*
+
 # How to Use
 
 1. Visit the domain: https://cs-case-simulation.vercel.app/ (yes this website is mobile friendly unlike most of the stuff I make which aren't)
