@@ -35,9 +35,11 @@ or if you want to run it locally:
 
 # Future Plans
 
-* Better item price calculations.
-* More case options.
-* Actually adding a skin system, so you know what skins you got in the simulation what float value etc it has, this also helps with better item price calculations so you get an accurate ROI.
+* Adding the skins of each case and showing you what skins you got. 
+* Add stuff like float values to those skins.
+* Adding both of the above features makes for better item price calculating and better ROI calculations.
+
+
 
 # Sources
 For Case odds and ROI: https://www.esports.net/wiki/guides/counter-strike-case-odds/ and https://cs2roi.com/roi/operation-breakout-weapon-case <br />
