@@ -8,7 +8,7 @@ This is a simple web-based tool that simulates opening cases in Counter-Strike. 
 
 # Features
 
-* Simulates case openings based on in-game odds.
+* Simulates a specified amount of case openings based on in-game odds.
 * Shows the number of items per rarity.
 * Displays total money spent and estimated value.
 * Calculates profit/loss and return on investment (ROI).
