@@ -38,7 +38,7 @@ or if you want to run it locally:
 * Adding the skins of each case and showing you what skins you got. 
 * Add stuff like float values to those skins.
 * Adding both of the above features makes for better item price calculating and better ROI calculations.
-
+all this is coming soon
 
 
 # Sources
